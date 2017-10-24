@@ -1,0 +1,105 @@
+@import "bourbon"
+@import "vars.sass"
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: "TornadoLight", sans-serif
+	overflow-x: hidden
+
+.hidden
+	display: none
+
+.top_line
+	background: #333333
+	height: 40px
+	display: flex
+	align-items: center
+.searh_top
+	position: relative
+	display: flex
+	input
+		width: 100%
+		max-width: 300px
+		background: transparent
+		border: 0px
+		font-size: 14px
+		padding-left: 30px
+		color: #fff
+		&::placeholder
+			color: #fff
+	.icon_search
+		position: absolute
+		left: 5px
+		top: 0
+		background: url(../img/icon_set.png) no-repeat
+		background-position: 0 0
+		display: block
+		width: 21px
+		height: 21px
+.header_nav
+	ul
+		display: flex
+		flex-flow: row wrap
+		margin: 0
+		align-items: center
+		li
+			margin-right: 20px
+			list-style-type: none
+			&:last-child
+				margin-right: 0px	
+			a
+				color: #fff
+				font-size: 14px
+.header_wrap
+	margin-top: 50px
+.slogan_header
+	p
+		line-height: 22px
+		font-size: 16px
+		color: $dc
+.info_header
+	p
+		line-height: 19px
+		font-size: 16px
+		margin: 0
+		span
+			color: $pc
+.contact_top,
+.mobile_holder
+	margin-top: -10px
+	.feadback
+		p
+			text-align: right
+			a
+				color: #000
+				font-size: 22px
+			&:last-child a
+				color: $lpc
+				font-size: 16px
+	ul
+		display: flex
+		justify-content: flex-end
+		margin: 0
+		li
+			list-style-type: none
+			margin-right: 10px
+			&:last-child
+				margin-right: 0px
+			.icon_contact
+				width: 25px
+				height: 28px
+				display: block
+				background: url(../img/icon_set.png) no-repeat
+				background-position: 0 0
+				transition: all 0.75s
+				&:hover
+					filter: contrast(75%)
+			&:nth-child(1) .icon_contact
+				background-position: -30px 0
+			&:nth-child(2) .icon_contact
+				background-position: -59px 0
+			&:nth-child(3) .icon_contact
+				background-position: -97px 0

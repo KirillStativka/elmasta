@@ -729,6 +729,8 @@ a.open-navigation.ssm-toggle-nav.ssm-nav-visible
 				margin-left: 5px
 			&:last-child
 				margin-right: 0px
+				&:after
+					display: none
 			a
 				color: #d0d0d0
 				text-decoration: underline
@@ -989,6 +991,705 @@ a.open-navigation.ssm-toggle-nav.ssm-nav-visible
 		border-style: solid
 		border-width: 16px 6px 0 0
 		border-color: #a82553 transparent transparent transparent
+// slider
+ul.lSPager.lSGallery li:first-child
+	display: none
+.lSSlideWrapper.usingCss
+	border: 1px solid $lpc
+.slider_kartochkra_inner
+	position: relative
+	.icon_new
+		z-index: 2
+		font-size: 18px
+		top: 10px
+		&:after
+			border-width: 29px 6px 0 0
+	.icon_like
+		cursor: pointer
+		z-index: 2
+		position: absolute
+		top: 15px
+		right: 10px
+		width: 21px
+		height: 19px
+		display: block
+		background: url(../img/icon_set.png) no-repeat
+		background-position: -69px -34px
+	.icon_zoom
+		cursor: pointer
+		z-index: 2
+		position: absolute
+		bottom: 15px
+		right: 10px
+		width: 55px
+		height: 55px
+		pointer-events: none
+		display: block
+		background: url(../img/icon_set.png) no-repeat
+		background-position: -52px -88px
+li.lslide
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 100%
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+	a
+		width: 100%
+.description_kartochka_slider
+	ul
+		padding: 0
+		li
+			list-style-type: none
+			p
+				color: #414141
+				font-size: 18px
+				margin-bottom: 20px
+				span
+					margin-left: 5px
+				&:last-child
+					margin-bottom: 0px
+					margin-top: 
+				&+p
+					margin-bottom: 0px
+.calk_customize
+	display: flex
+	.plus, .minus
+		width: 38px
+		height: 38px
+		color: #fff
+		background: $lpc
+		font-size: 23px
+		text-align: center
+		cursor: pointer
+		&:active
+			background: lighten($lpc,5%)
+	input
+		width: 38px
+		height: 38px
+		color: $lpc
+		background: #fff
+		text-align: center
+.buts_holder
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	.but_add_cart
+		margin-top: 20px
+		margin-right: 20px
+		a
+			border: 4px solid $lpc
+			padding: 5px 35px
+			display: block
+			font-size: 16px
+			color: $lpc
+			transition: all 0.75s
+			border-radius: 25px
+			&:hover
+				background: $lpc
+				color: #fff
+				text-decoration: none
+	.but_add_rozn
+		margin-top: 20px
+		a
+			color: $lpc
+			font-size: 16px
+.widget_holder
+	display: flex
+	.but_cust,
+	.but_share
+		margin-right: 25px
+		margin-top: 30px
+		a
+			color: $lpc
+			span
+				margin-right: 15px
+				font-size: 18px
+		&:last-child
+			margin-right: 0
+.model_any_colors
+	margin-top: 50px
+	ul
+		margin: 0
+		display: flex
+		justify-content: flex-start
+		li
+			list-style-type: none
+			margin-right: 50px
+			&:last-child
+				margin-right: 0
+.stars_holder_inner
+	background: url(../img/icon_default_star.png) no-repeat
+	width: 100%
+	height: 22px	
+	max-width: 122px
+	min-width: 122px
+	display: block
+	margin: 0 10px
+	.stars_single
+		background: url(../img/icon_star.png) repeat-x
+		height: 22px
+		width: 100%
+		max-width: 122px
+		display: block
+.descr_product
+	display: flex
+	flex-flow: row wrap
+	justify-content: flex-start
+	.stars_holder
+		display: flex
+.coments_product
+	display: flex
+	justify-content: flex-start
+	align-items: flex-start
+	margin-bottom: 40px
+	.img_holder
+		margin-right: 30px
+	.coment_holder
+		display: flex
+		justify-content: flex-start
+		flex-flow: column wrap
+		.stars_holder
+			display: flex
+			justify-content: flex-start
+		.name_person
+			margin-bottom: 25px
+		p
+			color: #aeaeae
+		.text_person
+			margin-top: 25px
+			width: 100%
+			max-width: 780px
+			p
+				color: #414141
+.rating
+	label
+		position: relative
+		display: inline
+		float: left
+		z-index: 1
+		width: 5px
+		height: 16px
+		margin-left: -22px
+.rating 
+	input[type=radio]
+		z-index: 2
+		display: inline
+		float: left
+		width: 22px
+		height: 25px
+		opacity: 0
+.star
+	background: url(../img/icon_rating_set.png)  0 -26px no-repeat
+	height: 25px
+	width: 22px
+	z-index: 1
+	position: absolute
+	top: 0
+	display: block
+	cursor: pointer
+    left: 0
+.rating:hover .star
+    background-position: 0 -26px
+input:checked ~ label .star
+    background-position: 0 0
+input:checked + label .star
+    background-position: 0 -26px
+label:hover ~ label .star
+    background-position: 0 0 !important
+.form_coment
+	form
+		display: flex
+		flex-flow: column wrap
+		.title_descr
+			font-size: 22px
+			color: #414141
+			line-height: 36px
+			font-weight: 900
+			margin-bottom: 30px
+		.input_holder
+			margin-bottom: 20px
+			input[type=text]
+				border: 0
+				border-bottom: 2px solid #414141
+				color: #414141
+				width: 100%
+				max-width: 300px
+				&::placeholder
+					color: #414141
+			textarea
+				background: #f4f7fa
+				padding: 15px 20px
+				border: 0px
+				width: 100%
+				resize: none
+				max-width: 780px
+				min-height: 100px
+			input[type=submit]
+				border: 4px solid $lpc
+				padding: 5px 35px
+				display: block
+				background: transparent
+				font-size: 16px
+				color: $lpc
+				transition: all 0.75s
+				border-radius: 25px
+				width: 240px
+				&:hover
+					background: $lpc
+					color: #fff
+					text-decoration: none
+.rules_coment
+	margin-bottom: 120px
+	.rules_coment_title
+		font-size: 22px
+		line-height: 36px
+		font-weight: 900
+		color: #414141
+		margin-bottom: 20px
+	ul
+		li
+			color: #414141
+			list-style-type: none
+			&:before
+				content: '-'
+				margin-right: 10px
+				font-size: 20px
+// tabs
+.blog_tabs
+	display: flex
+	padding: 0
+	li
+		color: #414141
+		font-size: 18px
+		list-style-type: none
+		margin-right: 20px
+		&.active
+			color: #a82553
+			font-weight: 900
+		&:last-child
+			margin-right: 0
+.blog_tabs_wrap
+	display: flex
+	margin-left: 160px	
+	margin-bottom: 50px
+	ul
+		li
+			list-style-type: none
+			span
+				color: #aeaeae
+				font-size: 14px
+				margin-left: 10px
+// blog_box
+.box_holder_blog
+	margin-bottom: 55px
+	.box_holder_blog_head
+		display: flex
+		justify-content: space-between
+		.box_holder_date
+			font-size: 14px
+			color: #a1a1a1
+		.box_holder_count
+			display: flex
+			font-size: 14px
+			color: #a1a1a1
+			.icon_count
+				color: $lpc
+				margin-right: 15px
+	.box_holder_thumb
+		margin-bottom: 20px
+		overflow: hidden
+		img
+			width: 100%
+			min-height: 300px
+			object-fit: cover
+			transition: all 0.75s
+	.box_holder_title
+		font-size: 18px
+		margin-bottom: 15px
+		color: #414141
+	.box_holder_descr
+		color: #414141
+	a:hover
+		text-decoration: none
+		img
+			filter: contrast(130%)
+			transform: scale(1.1)
+.content_blog
+	padding-bottom: 150px
+.content_blog.single
+	padding-bottom: 0
+	.box_holder_blog
+		.box_holder_blog_head
+			display: flex
+			justify-content: flex-start
+		.box_holder_blog_wrap_inner
+			padding: 0 80px
+			p
+				width: 100%
+				word-wrap: break-word
+		.thumb_single
+			img
+				width: 100%
+				object-fit: cover
+				max-height: 650px
+		.slider_conntent
+			.box_holder
+				img
+					width: 100%
+					max-height: 480px
+					object-fit: cover
+			.next_button
+				right: -90px
+				&:before
+					content: ''
+					background: url(../img/icon_set.png) no-repeat
+					width: 40px
+					height: 64px
+					display: block
+					background-position: 0 -151px
+					transform: rotate(180deg)
+			.prev_button
+				left: -90px
+				&:before
+					content: ''
+					background: url(../img/icon_set.png) no-repeat
+					width: 40px
+					height: 64px
+					display: block
+					background-position:  0 -151px
+			.prev_button,
+			.next_button
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+	.slider_hot_sell_wrap
+		margin-bottom: 20px
+.slider_conntent_wrap
+	position: relative
+	.counter_boxes
+		display: flex
+		position: absolute
+		right: -70px
+		top: 50%
+		transform: translateY(-50%)
+		input
+			width: 20px
+			height: 25px
+			font-size: 18px
+			border: 0
+			color: #000000
+			background: transparent
+		span
+			margin-right: 5px
+			font-size: 18px
+			color: #000000
+			margin-top: -3px
+.input_chek
+	flex: 1 1 100%
+	display: flex
+	justify-content: center
+	margin-top: 30px
+	label
+		color: #e0edf3
+		font-size: 14px
+	#radio_confirm
+		vertical-align: top
+		width: 19
+		height: 19
+		margin: 0 3px 0 0
+		border: 3px solid #e0edf3
+	#radio_confirm + label
+		cursor: pointer
+	#radio_confirm:not(checked)
+		position: absolute
+		opacity: 0
+	#radio_confirm:not(checked) + label
+		position: relative
+		padding: 0 0 0 35px
+	#radio_confirm:not(checked) + label:before
+		content: ''
+		position: absolute
+		top: 5px
+		left: 0
+		width: 19px
+		height: 19px
+		border: 2px solid #e0edf3
+		border-radius: 50%
+		background: transparent
+	#radio_confirm:not(checked) + label:after
+		content: ''
+		position: absolute
+		top: 10px
+		left: 5px
+		width: 9px
+		height: 9px
+		border-radius: 50%
+		background: #e0edf3
+		opacity: 0
+		transition: all .2s
+	#radio_confirm:checked + label:after
+		opacity: 1
+	#radio_confirm:focus + label:before
+		box-shadow: 0 0 0 3px rgba(255,255,0,.5)
+// box_sotrudn
+.box_sotrudn
+	display: flex
+	justify-content: flex-start
+	margin-bottom: 60px
+	.description_holder
+		.description_title
+			color: #414141
+			font-size: 20px
+			font-weight: 700
+		.description_text
+			font-size: 18px
+			color: #414141
+			ul
+				padding: 0
+				margin: 0
+				li
+					list-style-type: none
+					&:last-child
+						a
+							color: $lpc
+					a
+						color: #414141
+	.img_holder
+		margin-right: 65px
+.descr_magaz
+	display: flex
+	align-items: flex-start
+	.number_magaz
+		font-family: 'TornadoMed'
+		font-size: 100px
+		line-height: 100px
+		font-weight: 700
+		margin-right: 10px
+		color: #a82553
+	.txt_magaz
+		p
+			color: #414141
+			line-height: 20px
+.seo_help
+	p
+		font-size: 13px
+		color: #a1a1a1
+.city_magaz_wrap
+	margin-top: 80px
+.holder_magaz_city
+	display: flex
+	align-items: flex-start
+	margin-bottom: 50px
+	.letter_holder
+		font-size: 48px
+		line-height: 48px
+		color: #a82553
+		font-family: 'TornadoMed'
+		margin-right: 15px
+	.citys_holder
+		ul
+			margin: 0
+			padding: 0
+			li
+				list-style-type: none
+				a
+					color: #414141
+				span
+					margin-left: 5px
+					color: #aeaeae
+					font-size: 14px
+.info_person
+	display: flex
+	.description_info
+		ul
+			margin: 0
+			padding: 0
+			li
+				list-style-type: none
+				a
+					font-size: 18px
+					color: #414141
+					line-height: 22px
+				&:nth-child(2)
+					a
+						color: $lpc
+	.img_person
+		margin-right: 20px
+		img
+			width: 100%
+			max-width: 68px
+.kabine_stol
+	padding-left: 80px
+	margin-top: 50px
+	.box_info_kabinet
+		background: #f4f7fa
+		padding: 40px 60px
+		margin-bottom: 30px
+		height: 265px
+		display: flex
+		justify-content: space-around
+		flex-flow: column wrap
+		.title_box
+			font-size: 20px
+			line-height: 29px
+			color: #414141
+			font-family: 'TornadoMed'
+		.info_box
+			ul
+				margin: 0
+				padding: 0
+				width: 100%
+				max-width: 170px
+				li
+					list-style-type: none
+					color: #414141
+					font-size: 18px					
+					display: flex
+					justify-content: space-between
+					span
+						font-weight: 900
+		.info_more
+			margin-top: 20px
+			a
+				color: #8fa2b5
+				font-size: 18px
+				background: transparent
+				border: 4px solid #8fa2b5
+				padding: 5px 35px
+				border-radius: 25px
+				width: 100%
+				max-width: 250px
+				display: block
+				text-align: center
+				transition: all 0.75s
+				&:hover
+					background: #8fa2b5
+					color: #fff
+					text-decoration: none
+.box_info_kabinet.skidka
+	p
+		color: #a72553
+		margin-top: 20px
+		font-size: 70px
+		line-height: 70px
+.hott_sale 
+	.icon_new
+		top: 10px
+.box_sotrudn.vac
+	ul
+		li
+			&:before
+				content: '-'
+				margin-right: 15px
+				font-size: 25px
+				line-height: 20px
+	.description_title
+		margin-bottom: 30px
+.get_send_info
+	color: #414141
+	font-size: 18px
+	margin:
+		left: 180px
+		top: 30px
+		bottom: 50px
+	a
+		color: $lpc
+
+.accordion
+	width: 100%
+	min-height: 300px
+	margin: 20px auto
+.accordion-item
+	font-size: 1em
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	margin-bottom: 20px
+	height: auto	
+	font-weight: 500	
+	p
+		border-bottom: 1px dashed #000
+		color: #000
+		font-size: 20px
+		cursor: pointer
+	.count
+		margin-right: 10px
+		font-size: 20px
+.accordion-item.open
+	p
+		border-bottom: 1px solid transparent
+		border-bottom: 0px
+div.data
+	padding: 15px 0
+	line-height: 140%
+	display: none
+	color: #414141
+	line-height: 22px
+	ul
+		margin: 10px 0
+		padding: 0
+		li
+			list-style-type: none
+			&:before
+				content: '-'
+				font-size: 20px
+				line-height: 18px
+				margin-right: 10px
+// confirm registration
+.confirm_regisration_wrapper
+	background: #f4f7fa
+	height: 100%
+	min-height: 530px
+	margin: 80px 0
+	display: flex
+	justify-content: space-around
+	align-items: center
+	flex-flow: column wrap
+	text-align: center
+	.box_confirm
+		h2
+			font-size: 20px
+	.get_social
+		ul
+			display: flex
+			align-items: center
+			justify-content: center
+			margin: 15px  0
+			padding: 0
+			li
+				list-style-type: none
+				margin-right: 25px
+				a
+					transition: all 0.75s
+					display: block
+					span
+						width: 21px
+						height: 24px
+						display: block
+						background: url(../img/icon_set.png) no-repeat
+						background-position: -113px -96px
+				&:nth-child(2)
+					a
+						span
+							background-position: -158px -91px
+							height: 30px 
+				&:nth-child(3)
+					margin-right: 0
+					a
+						span
+							background-position: -213px -91px
+							height: 30px 
+				a:hover
+					filter: contrast(130%)
+
+
+
+
+
 
 
 //ALWAYS END

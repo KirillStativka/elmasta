@@ -1685,10 +1685,88 @@ div.data
 							height: 30px 
 				a:hover
 					filter: contrast(130%)
-
-
-
-
+.contact_box
+	.contact_holder
+		margin-bottom: 20px
+		position: relative
+		ul
+			margin: 0
+			padding: 0
+			li
+				list-style-type: none
+				color: #414141
+				font-size: 18px
+				a
+					color: $lpc
+		&:first-child
+			.icon_holder
+				width: 20px
+				height: 28px
+				position: absolute
+				top: 0
+				left: -35px
+				display: block
+				filter: contrast(0%)
+				background: url(../img/icon_set.png) no-repeat
+				background-position:  -137px -30px	
+		&:nth-child(2)
+			.icon_holder
+				width: 20px
+				height: 28px
+				position: absolute
+				filter: contrast(0%)
+				top: 0
+				left: -35px
+				display: block
+				background: url(../img/icon_set.png) no-repeat
+				background-position: -95px -30px
+		&:nth-child(3)
+			.icon_holder
+				width: 20px
+				height: 28px
+				position: absolute
+				filter: contrast(0%)
+				top: 0
+				left: -35px
+				display: block
+				background: url(../img/icon_set.png) no-repeat
+				background-position:  -117px -30px
+.location_holder
+	margin-bottom: 30px
+.manager_holder
+	display: flex
+	margin-bottom: 30px
+	.img_holder
+		margin-right: 20px
+	.name_manager
+		color: #414141
+		font-size: 20px
+		margin-bottom: 10px
+		font-weight: 900
+	.contact_manager
+		display: flex
+		flex-flow: column wrap
+		a
+			color: #414141
+			font-size: 18px
+			&:first-child
+				color: $lpc
+	.but_get_call
+		margin-top: 30px
+		a
+			border: 4px solid $lpc
+			padding: 5px 20px
+			display: block
+			font-size: 16px
+			color: $lpc
+			transition: all 0.75s
+			border-radius: 25px
+			&:hover
+				background: $lpc
+				color: #fff
+				text-decoration: none
+.manager_wrap
+	margin-bottom: 60px
 
 
 

@@ -89,27 +89,27 @@ $(function () {
 		navigationText: ['<span class="prev_button"></span>', '<span class="next_button"></span>']
 	});
 
+		
 	var divs = $('.box_holder').length;
 	$('.all_boxes input').val(divs);
 	var boxes = $('.curent_boxes');
 	var index = 0;
-	while (index < divs) {
-		$('.slider_conntent .prev_button').click(function () {
-			var $input = $(boxes).find('input');
-			var count = parseInt($input.val()) - 1;
-			count = count < 1 ? 1 : count;
-			$input.val(count);
-			$input.change();
-			return false;
-		});
-		$('.slider_conntent .next_button').click(function () {
-			var $input = $(boxes).find('input');
-			$input.val(parseInt($input.val()) + 1);
-			$input.change();
-			return false;
-		});
-		index++;
-	}
+
+	$('.slider_conntent .prev_button').click(function () {
+		var $input = $(boxes).find('input');
+		var count = parseInt($input.val()) - 1;
+		count = count < 1 ? 1 : count;
+		$input.val(count);
+		$input.change();
+		return false;
+	});
+	$('.slider_conntent .next_button').click(function () {
+		var $input = $(boxes).find('input');
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
+		return false;
+	});
+
 
 	$(function ($) {
 		var allAccordions = $('.accordion div.data');
@@ -303,11 +303,6 @@ $(document).ready(function () {
 		slideMargin: 0,
 		enableDrag: false,
 		currentPagerPosition: 'left',
-		onSliderLoad: function (el) {
-			el.lightGallery({
-				selector: '#imageGallery .lslide'
-			});
-		}
 	});
 });
 jQuery(document).ready(function ($) {

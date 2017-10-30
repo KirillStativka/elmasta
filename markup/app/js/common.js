@@ -80,16 +80,18 @@ $(function () {
 		navigationText: ['<span class="prev_button"></span>', '<span class="next_button"></span>']
 	});
 	$(".slider_conntent").owlCarousel({
-		autoPlay: 5000,
+		autoPlay: false,
 		navigation: true,
 		slideSpeed: 300,
 		paginationSpeed: 400,
 		singleItem: true,
+		mouseDrag: false,
+		touchDrag: false,
 		items: 1,
 		navigationText: ['<span class="prev_button"></span>', '<span class="next_button"></span>']
 	});
 
-		
+
 	var divs = $('.box_holder').length;
 	$('.all_boxes input').val(divs);
 	var boxes = $('.curent_boxes');
@@ -107,6 +109,12 @@ $(function () {
 		var $input = $(boxes).find('input');
 		$input.val(parseInt($input.val()) + 1);
 		$input.change();
+		++index;
+		console.log(index);
+		if (index >= divs) {
+			$('.curent_boxes input').val(1);
+			index = 0;
+		}
 		return false;
 	});
 
@@ -146,7 +154,7 @@ $(function () {
 	});
 
 	// counts index
-	/*
+	
 		$(document).ready(function () {
 
 			var show = true;
@@ -156,14 +164,13 @@ $(function () {
 				if (!show) return false;
 
 				var w_top = $(window).scrollTop();
-				var e_top = $(countbox).offset().top;
 
 				var w_height = $(window).height();
 				var d_height = $(document).height();
 
 				var e_height = $(countbox).outerHeight();
 
-				if (w_top + 200 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+				if (w_top + 200  || w_height + w_top == d_height || e_height < w_height) {
 					$(".spincrement").spincrement({
 						thousandSeparator: "",
 						duration: 12000
@@ -173,7 +180,6 @@ $(function () {
 				}
 			});
 		});
-		*/
 });
 
 /**

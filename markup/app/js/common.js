@@ -110,7 +110,6 @@ $(function () {
 		$input.val(parseInt($input.val()) + 1);
 		$input.change();
 		++index;
-		console.log(index);
 		if (index >= divs) {
 			$('.curent_boxes input').val(1);
 			index = 0;

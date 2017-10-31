@@ -1845,17 +1845,18 @@ div.data
 	.table_td:nth-child(7)
 		flex: 1 1 160px
 .cart_wrap_inner_table_holder.not_reg
+	margin-bottom: 40px
 	.table_tr
 		.table_td:nth-child(1)
 			flex: 1 1 45px
 		.table_td:nth-child(2)
-			flex: 1 1 150px
+			flex: 2 1 150px
 		.table_td:nth-child(3)
-			flex: 1 1 250px
+			flex: 3 1 250px
 		.table_td:nth-child(4)
-			flex: 1 1 170px
+			flex: 4 1 170px
 		.table_td:nth-child(5)
-			flex: 1 1 170px
+			flex: 5 1 170px
 	.table_cart_tbody
 		.table_tr
 			.table_td:nth-child(2)
@@ -1875,6 +1876,9 @@ div.data
 					background-position: 0 0
 	.count_prod
 		position: initial !important
+.buts_holder.not_reg
+	margin-bottom: 40px
+	justify-content: flex-end
 .table_cart_tbody
 	margin-top: 2px
 	.table_tr
@@ -2034,6 +2038,109 @@ div.data
 				text-decoration: none	
 		&:last-child
 			margin-right: 0	
+.box_went
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	width: 100%
+	padding: 30px
+	.input_holder
+		select
+			border: 0
+			border-bottom: 2px solid #000
+			width: 320px
+			color: #000
+	.but_add
+		margin-left: 30px
+		a
+			border: 4px solid $lpc
+			padding: 5px 45px
+			display: block
+			font-size: 16px
+			color: $lpc
+			transition: all 0.75s
+			border-radius: 25px
+			&:hover
+				background: $lpc
+				color: #fff
+				text-decoration: none
+
+
+
+
+
+
+.box_del_radio_holder
+	display: flex
+	justify-content: flex-start
+	flex-flow: column wrap
+	margin-top: 20px
+	.input_holder
+		label
+			color: #414141
+			font-size: 16px
+		.radio_opl	
+			vertical-align: top
+			width: 19
+			height: 19
+			margin: 0 3px 0 0
+			border: 3px solid $lpc
+		.radio_opl + label
+			cursor: pointer
+		.radio_opl:not(checked)
+			position: absolute
+			opacity: 0
+		.radio_opl:not(checked) + label
+			position: relative
+			padding: 0 0 0 35px
+		.radio_opl:not(checked) + label:before
+			content: ''
+			position: absolute
+			top: 0px
+			left: 0
+			width: 19px
+			height: 19px
+			border: 2px solid $lpc
+			border-radius: 50%
+			background: transparent
+		.radio_opl:not(checked) + label:after
+			content: ''
+			position: absolute
+			top: 5px
+			left: 5px
+			width: 9px
+			height: 9px
+			border-radius: 50%
+			background: $lpc
+			opacity: 0
+			transition: all .2s
+		.radio_opl:checked + label:after
+			opacity: 1
+.box_del_title
+	font-size: 20px
+	flex: 1 1 100%
+.box_delivery
+	padding: 30px 50px
+	.box_del_wrap
+		display: flex
+		flex-flow: row wrap
+		justify-content: flex-start
+		align-items: center
+
+	.box_info_del , .box_delivery_holder
+		width: 45%
+	.box_info_del
+		margin-top: 10px
+
+
+
+
+
+
+
+
+
+
 
 
 

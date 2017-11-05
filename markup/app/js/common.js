@@ -41,11 +41,20 @@ $(function () {
 		}
 
 	});
-// drop down mnu
-$('.header_nav ul.top_mnu li').hover(function(){
-	$(this).toggleClass('active');
-})
+	// drop down mnu
 
+	$(window).ready(function () {
+		width = $(window).width();
+		if (width >= 991) {
+			$('.header_nav ul.top_mnu li').hover(function () {
+				$(this).toggleClass('active');
+			});
+		} if (width <= 768) {
+			$('ul.top_mnu li').click(function () {
+				$('.header_nav ul.top_mnu').find(this).toggleClass('active');
+			});
+		}
+	});
 
 	// slider index
 	$(".slider_holder").owlCarousel({
@@ -112,7 +121,7 @@ $('.header_nav ul.top_mnu li').hover(function(){
 				onInitialized: counter, //When the plugin has initialized.
 				onTranslated: counter //When the translation of the stage has finished.	
 			});
-	
+		
 			function counter(event) {
 				var element = event.target;         // DOM element, in this example .owl-carousel
 				var items = event.item.count;     // Number of items

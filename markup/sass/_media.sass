@@ -6,7 +6,13 @@
 @media only screen and (max-width : 1200px)
 	/**/
 
-
+	.header_nav ul.top_mnu li
+		margin-right: 5px
+	.get_more_holder 
+		.get_more_holder_box
+			font-size: 13px
+	.get_more_holder .get_more_holder_box:first-child:after
+		right: -42px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	.slogan_header
@@ -27,6 +33,30 @@
 		margin-left: 0px
 	a.open-navigation.ssm-toggle-nav.ssm-nav-visible
 		display: block
+	.cart_tovar_holder
+		position: fixed
+		width: 100%
+		top: 0
+		text-align: center
+		left: 0
+		height: 100%
+		.cart_tovar_holder_buts
+			margin-top: 30px
+		.cart_tovar_holder_title
+			font-size: 22px
+		.box_item_holder
+			height: 250px
+		.cart_tovar_holder_wrap
+			height: calc(100% - 25%)
+	.cart_wrap
+		position: fixed
+		z-index: 2222
+		top: 25%
+		right: 0
+		margin-right: -137px
+		border-radius: 5px 0 0 5px
+		padding: 10px
+		background: #414141
 	nav.header_nav
 		height: 100%
 		width: 280px
@@ -56,6 +86,36 @@
 		justify-content: center
 	.filter_holder
 		flex-wrap: wrap
+	.filter_content_product ul, .show_more ul
+		flex-wrap: wrap
+	
+	.header_holder
+		justify-content: flex-end
+	.blog_tabs_wrap
+		margin-left: 0
+	form#form_feadback
+		.input_holder
+			margin-bottom: 20px
+	.get_more_holder
+		flex-flow: column wrap
+	.get_more_holder .get_more_holder_box:first-child
+		width: 100%
+		justify-content: center
+		&:after
+			display: none
+	.get_more_holder .get_more_holder_box
+		width: 100%
+		justify-content: center
+	.table_td
+		font-size: 14px
+	.cart_wrap_inner_table_holder_inner
+		overflow: scroll
+		overflow-y: hidden
+	.table_cart_tbody,
+	.cart_wrap_inner_table_articul
+		width: 200%
+	.cart_wrap_inner_table
+		padding: 0
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	.person_container
@@ -108,7 +168,75 @@
 		position: initial
 		justify-content: center
 		margin: 20px auto
-
+	
+	.header_nav ul.top_mnu 
+		li
+			text-align: center
+			width: 100%
+			a
+			font-size: 18px
+	.header_nav ul.drop_down
+		position: initial
+		background: #414141
+		width: 100%
+		flex-flow: column wrap
+		li a 
+			font-size: 14px
+	.blog_tabs_wrap
+		margin-left: 0
+		flex-flow: column wrap
+		text-align: center
+	.content_blog.single .box_holder_blog .box_holder_blog_wrap_inner
+		padding: 0 40px
+	.slider_conntent_wrap .counter_boxes
+		display: none
+	.content_blog.single .box_holder_blog .slider_conntent .prev_button
+		left: -30px
+	.content_blog.single .box_holder_blog .slider_conntent .next_button
+		right: -30px
+	.title h3
+		font-size: 22px
+	.qustion_block .qustion_block_holder
+		padding: 55px 10px
+	.promokod_info
+		flex-flow: column wrap
+	.buts_holder
+		flex-flow: column wrap
+		.buts_more
+			margin-bottom: 20px
+			margin-right: 0
+	.promokod_info .promokod_holder
+		margin-bottom: 20px 
+		.get_promo a
+			padding: 5px 25px
+	.title_wrap
+		flex-flow: column wrap
+	.breadcrumbs ul
+		padding: 0
+		flex-flow: row wrap
+	.cart_table_progress ul
+		flex-flow: column wrap
+		justify-content: center
+		align-items: center
+		li:after
+			display: none
+	.box_went .input_holder select
+		width: 280px
+	.kabine_stol
+		padding-left: 0
+	.coments_product , .descr_product,
+	.coment_holder .stars_holder
+		flex-flow: column wrap
+	.description_kartochka_slider ul li p
+		word-wrap: break-word
+	.coments_product .coment_holder p
+		width: 300px
+		word-wrap: break-word
+	.box_sotrudn
+		flex-flow: column wrap
+		align-items: center
+	.get_send_info
+		margin-left: 0
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	.slider_wrap .info_box
@@ -142,10 +270,18 @@
 			width: 95%
 	.contact_top .feadback p a, .mobile_holder .feadback p a
 		font-size: 16px
+	.content_blog.single .box_holder_blog .box_holder_blog_wrap_inner
+		padding: 0 20px
+	.promokod_info .promokod_holder .finel_sum p
+		font-size: 14px
+	.get_more_holder .get_more_holder_box
+		padding: 15px
+		margin: 0
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
-
+.cart_tovar_holder .cart_tovar_holder_title
+	padding-top: 0
 
 /*==========  Mobile First Method  ==========*/
 

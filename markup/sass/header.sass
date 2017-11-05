@@ -41,14 +41,16 @@ body
 		width: 21px
 		height: 21px
 .header_nav
-	ul
+	ul.top_mnu
 		display: flex
 		flex-flow: row wrap
 		margin: 0
 		align-items: center
+		position: relative
 		li
 			margin-right: 20px
 			list-style-type: none
+			padding: 7px 0px
 			&:last-child
 				margin-right: 0px	
 			a
@@ -104,3 +106,28 @@ body
 				background-position: -59px 0
 			&:nth-child(3) .icon_contact
 				background-position: -97px 0
+// drop down mnu
+.header_nav 
+	ul.drop_down
+		position: absolute
+		background: #414141
+		top: 40px
+		left: 32px
+		width: 100%
+		display: none
+		flex-flow: row wrap
+		z-index: 22
+		margin: 0
+		padding: 25px 20px
+		li
+			margin-right: 0
+			a
+				display: block
+				padding: 10px
+				&:hover
+					background: rgba(115, 115, 115, 0.64)
+					text-decoration: none
+
+.header_nav ul.top_mnu li.active
+	ul.drop_down
+		display: flex

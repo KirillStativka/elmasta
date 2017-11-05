@@ -41,7 +41,10 @@ $(function () {
 		}
 
 	});
-
+// drop down mnu
+$('.header_nav ul.top_mnu li').hover(function(){
+	$(this).toggleClass('active');
+})
 
 
 	// slider index

@@ -6,25 +6,6 @@ $(function () {
 			return $(this).attr("src").replace(".svg", ".png");
 		});
 	};
-
-	//E-mail Ajax Send
-	//Documentation & Example: https://github.com/agragregra/uniMail
-	$(".tabs_box_inner form").submit(function () { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "/calk/mail.php", //Change
-			data: th.serialize()
-		}).done(function () {
-			alert("Thank you!");
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
-
 	//Chrome Smooth Scroll
 	try {
 		$.browserSelector();
@@ -42,6 +23,27 @@ $(function () {
 		type: "inline",
 		midClick: true
 	});
+	// cart 
+	$('.icon_cart, .close_cart').click(function () {
+		$('.cart_tovar_holder').slideToggle();
+	});
+	// tabu form
+	$('.form_tabs ul').on('click', 'li:not(.active_tabs)', function () {
+		$(this)
+			.addClass('active_tabs').siblings().removeClass('active_tabs')
+			.closest('.form_wrapp').find('div.form_tabs_wrap_box').removeClass('active_tabs').eq($(this).index()).addClass('active_tabs');
+		$('.get_social p').toggleClass('active_tabs');
+	});
+	$('.product_holder, .close_icon ').click(function () {
+		$(this).toggleClass('hover_active');
+		if ($(this).hasClass('hover_active')) {
+			$('.box_descr_more').fadeToggle();
+		}
+
+	});
+
+
+
 	// slider index
 	$(".slider_holder").owlCarousel({
 		autoPlay: 5000,
@@ -91,6 +93,31 @@ $(function () {
 		navigationText: ['<span class="prev_button"></span>', '<span class="next_button"></span>']
 	});
 
+	/*
+		$(function () {
+			var owl = $('.slider_conntent');
+			owl.owlCarousel({
+				autoPlay: false,
+				navigation: true,
+				slideSpeed: 300,
+				paginationSpeed: 400,
+				singleItem: true,
+				mouseDrag: false,
+				touchDrag: false,
+				items: 1,
+				navigationText: ['<span class="prev_button"></span>', '<span class="next_button"></span>'],
+				onInitialized: counter, //When the plugin has initialized.
+				onTranslated: counter //When the translation of the stage has finished.	
+			});
+	
+			function counter(event) {
+				var element = event.target;         // DOM element, in this example .owl-carousel
+				var items = event.item.count;     // Number of items
+				var item = event.item.index + 1;     // Position of the current item
+				$('.currrent').html("item " + item + " of " + items)
+			}
+		});
+		*/
 
 	var divs = $('.box_holder').length;
 	$('.all_boxes input').val(divs);
@@ -153,32 +180,32 @@ $(function () {
 	});
 
 	// counts index
-	
-		$(document).ready(function () {
 
-			var show = true;
-			var countbox = "#counts";
-			$(window).on("scroll load resize", function () {
+	$(document).ready(function () {
 
-				if (!show) return false;
+		var show = true;
+		var countbox = "#counts";
+		$(window).on("scroll load resize", function () {
 
-				var w_top = $(window).scrollTop();
+			if (!show) return false;
 
-				var w_height = $(window).height();
-				var d_height = $(document).height();
+			var w_top = $(window).scrollTop();
 
-				var e_height = $(countbox).outerHeight();
+			var w_height = $(window).height();
+			var d_height = $(document).height();
 
-				if (w_top + 200  || w_height + w_top == d_height || e_height < w_height) {
-					$(".spincrement").spincrement({
-						thousandSeparator: "",
-						duration: 12000
-					});
+			var e_height = $(countbox).outerHeight();
 
-					show = false;
-				}
-			});
+			if (w_top + 200 || w_height + w_top == d_height || e_height < w_height) {
+				$(".spincrement").spincrement({
+					thousandSeparator: "",
+					duration: 12000
+				});
+
+				show = false;
+			}
 		});
+	});
 });
 
 /**

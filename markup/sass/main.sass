@@ -2263,6 +2263,7 @@ div.data
 			left: 5px
 			cursor: pointer
 			filter: contrast(10%)
+			border: 0
 			width: 21px
 			height: 19px
 			display: block
@@ -2570,9 +2571,37 @@ span.icon_drop
 	max-width: 150px
 	height: 150px
 	object-fit: cover
-
-
-
+.slider_more_product
+	.next_button
+		right: -50px
+		&:before
+			content: ''
+			background: url(../img/icon_set.png) no-repeat
+			width: 40px
+			height: 64px
+			display: block
+			background-position: 0px -88px
+			transform: rotate(180deg)
+	.prev_button
+		left: -50px
+		&:before
+			content: ''
+			background: url(../img/icon_set.png) no-repeat
+			width: 40px
+			height: 64px
+			display: block
+			background-position: 0px -88px
+	.prev_button,
+	.next_button
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+.top_line.fixed_nav
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	z-index: 2222
 
 
 

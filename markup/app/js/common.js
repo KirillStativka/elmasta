@@ -93,6 +93,15 @@ $(function () {
 		items: 4,
 		navigationText: ['<span class="prev_button"></span>', '<span class="next_button"></span>']
 	});
+	$(".slider_more_product").owlCarousel({
+		autoPlay: 5000,
+		navigation: true,
+		slideSpeed: 300,
+		paginationSpeed: 400,
+		singleItem: false,
+		items: 3,
+		navigationText: ['<span class="prev_button"></span>', '<span class="next_button"></span>']
+	});
 	$(".slider_conntent").owlCarousel({
 		autoPlay: false,
 		navigation: true,
@@ -104,7 +113,36 @@ $(function () {
 		items: 1,
 		navigationText: ['<span class="prev_button"></span>', '<span class="next_button"></span>']
 	});
+	// fixed header nav
+	var _id = $('.top_line');
+	var _hid = _id.offset().top;
+	$(window).scroll(function () {
+		if ($(window).scrollTop() > _hid) {
+			$(_id).addClass('fixed_nav');
+			$('.header_wrap').css('margin-top', '91px');
+		}
+		if ($(window).scrollTop() < _hid) {
+			$(_id).removeClass('fixed_nav');
+			$('.header_wrap').css('margin-top', '50px');
+		}
+	});
 
+	$(window).load(function () { // вешаем скрипт на load ибо при ready chrome криво достаёт размеры
+		var hh = $('header').height(); // берем высоту шапки и суем в переменную hh
+		var fh = $('footer').height(); // то же самое с подвалом
+		var wh = $(window).height(); // высота всего окна
+		var сh = wh - hh - fh; // считаем оптимальную высоту для блока с контентом
+		$('.content_wrapper').css('min-height', сh); // применяем посчитанную высоту
+	});
+
+	$('input#radio_confirm_1').click(function () { 
+			$('.name_company').hide();
+			$('.input_holder_wrap_holder .input_get').css('margin-top','30px');
+	});
+	$('input#radio_confirm_2').click(function () {
+		$('.name_company').show();
+		$('.input_holder_wrap_holder .input_get').css('margin-top','70px');
+	 });
 	/*
 		$(function () {
 			var owl = $('.slider_conntent');

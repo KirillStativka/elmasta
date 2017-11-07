@@ -404,7 +404,7 @@ $(document).ready(function () {
 	$('.close_icon').click(function () {
 		if ($('.header_nav').hasClass('ssm-nav-visible')) {
 			$('.header_nav').removeClass("ssm-nav-visible");
-			$('.header_nav').css("transform", "translate(-280px,0)");
+			$('.header_nav').css("transform", "translate(-100%,0)");
 		}
 
 	});

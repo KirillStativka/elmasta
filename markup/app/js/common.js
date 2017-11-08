@@ -135,14 +135,20 @@ $(function () {
 		$('.content_wrapper').css('min-height', сh); // применяем посчитанную высоту
 	});
 
-	$('input#radio_confirm_1').click(function () { 
-			$('.name_company').hide();
-			$('.input_holder_wrap_holder .input_get').css('margin-top','30px');
+	$('input#radio_confirm_1').click(function () {
+		$('.name_company').hide();
+		$('.input_holder_wrap_holder .input_get').css('margin-top', '30px');
+		$('#fam_1').attr('placeholder','Фамилия');
+		$('#fam_2').attr('placeholder','Имя');
+		$('#fam_3').attr('placeholder','Отчество');
 	});
 	$('input#radio_confirm_2').click(function () {
 		$('.name_company').show();
-		$('.input_holder_wrap_holder .input_get').css('margin-top','70px');
-	 });
+		$('.input_holder_wrap_holder .input_get').css('margin-top', '70px');
+		$('#fam_1').attr('placeholder','Фамилия контактного лица');
+		$('#fam_2').attr('placeholder','Имя контактного лица');
+		$('#fam_3').attr('placeholder','Отчество контактного лица');
+	});
 	/*
 		$(function () {
 			var owl = $('.slider_conntent');

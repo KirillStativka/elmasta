@@ -28,18 +28,14 @@ $(function () {
 		$('.cart_tovar_holder').slideToggle();
 	});
 	// tabu form
-	$('.form_tabs ul').on('click', 'li:not(.active_tabs)', function () {
+	$('.form_tabs ul, ul.img_katalog_many').on('click', 'li:not(.active_tabs)', function () {
 		$(this)
 			.addClass('active_tabs').siblings().removeClass('active_tabs')
-			.closest('.form_wrapp').find('div.form_tabs_wrap_box').removeClass('active_tabs').eq($(this).index()).addClass('active_tabs');
+			.closest('.form_wrapp, .box_descr_more').find('div.wrap_holders_item').removeClass('active_tabs').eq($(this).index()).addClass('active_tabs');
 		$('.get_social p').toggleClass('active_tabs');
 	});
-	$('.product_holder, .close_icon ').click(function () {
-		$(this).toggleClass('hover_active');
-		if ($(this).hasClass('hover_active')) {
-			$('.box_descr_more').fadeToggle();
-		}
-
+	$('.product_holder, .close_icon ').hover(function () {
+		$(this).toggleClass('active').find('.box_descr_more').fadeToggle();
 	});
 	// drop down mnu
 
